@@ -8,6 +8,10 @@ public class DefaultMethodMainTest {
 		dimpl1.testMethod();
 		dimpl1.testDefaultMethod();
 		((DefaultMethodIntf1)dimpl1).testDefaultMethod();
+		
+		DefaultMethodIntf1 dinf1 = new DefaultMethodImpl1();
+		System.out.println("Calling default method on interface");
+		dinf1.testDefaultMethod();
 	}
 	
 }

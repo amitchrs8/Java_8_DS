@@ -33,7 +33,7 @@ public class LambdaMainTest {
 			}
 		};
 
-		lintfParam1.printSquare("34j");
+		lintfParam1.printSquare("34");
 
 		LambdaIntfWithReturn lintf3 = (String input) -> {
 			System.out.println(" the input passed is : " + input);

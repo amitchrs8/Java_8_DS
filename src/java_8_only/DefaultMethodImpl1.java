@@ -7,8 +7,8 @@ public class DefaultMethodImpl1 implements DefaultMethodIntf1{
 		System.out.println("testMethod method from DefaultMethodImpl1");
 	}
 
-	
-	public void testDefaultMethod(){
-		System.out.println(" overriding the default method ");
-	}
+//	
+//	public void testDefaultMethod(){
+//		System.out.println(" overriding the default method ");
+//	}
 }
