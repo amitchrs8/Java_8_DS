@@ -1,4 +1,4 @@
-package ds;
+package ds.LinkedList;
 
 public class CLLNode {
 
