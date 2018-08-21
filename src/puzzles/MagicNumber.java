@@ -7,29 +7,15 @@ import java.util.stream.IntStream;
 public class MagicNumber {
 
 	public static void main(String[] args) {
-		printMagicNumber(6000, 6500);
+		printMagicNumber(50, 1000);
 	}
-
-	// public static boolean containDuplicates(int number) {
-	// if (number % 10 == number) {
-	// return false;
-	// } else {
-	// Set<Integer> intSet = new HashSet<>();
-	// Integer tempNum = number;
-	// while (tempNum > 0) {
-	// int digit = tempNum % 10;
-	// boolean isRepeated = intSet.add(digit);
-	// if (!isRepeated)
-	// return true;
-	// tempNum = tempNum / 10;
-	// }
-	// }
-	// return false;
-	// }
 
 	public static boolean isMagicNumber(Integer number) {
 		boolean result = false;
 		Integer[] intArray = new Integer[number.toString().length()];
+		if(intArray.length<2) {
+			return false;
+		}
 		for (int i = 0; i < intArray.length; i++) {
 			int digit = number % 10;
 			number = number / 10;
@@ -38,16 +24,11 @@ public class MagicNumber {
 		Set<Integer> set = new HashSet<>();
 		for (int i = 0; i < intArray.length; i++) {
 			int visitedIndex = (i + intArray[i]) % (intArray.length);
-			if (visitedIndex >= intArray.length) {
+			if (set.contains(intArray[visitedIndex])) {
 				result = false;
 				return result;
 			} else {
-				if (set.contains(intArray[visitedIndex])) {
-					result = false;
-					return result;
-				} else {
-					set.add(intArray[visitedIndex]);
-				}
+				set.add(intArray[visitedIndex]);
 			}
 		}
 		result = true;
